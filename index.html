@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio - Ahmad Ubaidillah Tsani</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .profile-image {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        .project-image {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .gambar {
+            width: 400px;
+            height: 400px; 
+            object-fit: cover;
+            object-position: center;
+        }
+
+        #typing-text::after {
+            content: "|";
+            animation: blink 1s step-end infinite;
+            color: white;
+        }
+        
+        @keyframes blink {
+            from, to { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header>
+        <nav class="bg-white/80 backdrop-blur-md shadow-lg sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="text-2xl font-bold bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300">
+                        Porto<span class="text-red-500">.</span>
+                    </div>
+                    <div class="hidden md:flex space-x-8">
+                        <a href="#home" class="relative group text-gray-800 hover:text-red-600 transition-colors duration-300">
+                            Beranda
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="#about" class="relative group text-gray-800 hover:text-red-600 transition-colors duration-300">
+                            Tentang
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="#projects" class="relative group text-gray-800 hover:text-red-600 transition-colors duration-300">
+                            Projek
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="#contact" class="relative group text-gray-800 hover:text-red-600 transition-colors duration-300">
+                            Kontak
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                    </div>
+                    <div class="md:hidden">
+                        <button id="menu-toggle" class="text-gray-800 focus:outline-none hover:text-red-600 transition-colors">
+                            <svg id="icon-hamburger" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                            <svg id="icon-close" class="w-6 h-6 hidden transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden flex-col px-4 pb-4 space-y-3 bg-white/95 backdrop-blur-sm transition-all duration-300">
+                <a href="#home" class="block py-2 px-3 rounded-lg text-gray-800 hover:bg-red-50 hover:text-red-600 transition-colors">Beranda</a>
+                <a href="#about" class="block py-2 px-3 rounded-lg text-gray-800 hover:bg-red-50 hover:text-red-600 transition-colors">Tentang</a>
+                <a href="#projects" class="block py-2 px-3 rounded-lg text-gray-800 hover:bg-red-50 hover:text-red-600 transition-colors">Projek</a>
+                <a href="#contact" class="block py-2 px-3 rounded-lg text-gray-800 hover:bg-red-50 hover:text-red-600 transition-colors">Kontak</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-900 via-red-700 to-red-600">
+            <div class="text-center px-4">
+                <div class="mb-8">
+                    <img src="assets/guweh.jpg" 
+                         alt="Profile" 
+                         class="profile-image mx-auto">
+                </div>
+                <h1 class="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-200 to-white mb-4">
+                    Ahmad Ubaidillah Tsani
+                </h1>
+                <p class="text-xl md:text-2xl text-red-100 font-light tracking-wider mb-8" id="typing-text">
+                </p>
+            </div>
+        </section>
+        <section id="about" class="min-h-screen py-20 flex items-center bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Tentang Saya</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-red-500 to-red-400 mx-auto"></div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="assets/guweh.jpg" 
+                             alt="About Me" 
+                             class="rounded-lg shadow-xl w-full max-w-md mx-auto h-auto gambar">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Halo, Saya Ahmad</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Saya seorang Front End Developer dengan pengalaman lebih dari 1 tahun dalam membangun aplikasi web modern. 
+                            Saya memiliki keahlian dalam berbagai teknologi frontend serta passionate tentang menciptakan 
+                            solusi digital yang efisien dan user-friendly.
+                        </p>
+                        <div class="mb-8">
+                            <h4 class="text-xl font-medium text-gray-800 mb-4">Keahlian</h4>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-4 py-2 bg-red-100 text-red-800 rounded-full">JavaScript</span>
+                                <span class="px-4 py-2 bg-red-100 text-red-800 rounded-full">PHP</span>
+                                <span class="px-4 py-2 bg-red-100 text-red-800 rounded-full">MySQL</span>
+                                <span class="px-4 py-2 bg-red-100 text-red-800 rounded-full">Tailwind CSS</span>
+                                <span class="px-4 py-2 bg-red-100 text-red-800 rounded-full">Python</span>
+                            </div>
+                        </div>
+                        <a href="file:///C:/Users/Lenovo/OneDrive/%E6%96%87%E6%A1%A3/Data%20Pribadi/243107030095_Ahmad%20Ubaidillah%20Tsani_1E(1).pdf" class="inline-flex items-center text-red-600 hover:text-red-800 font-medium">
+                            Download CV
+                            <i class="fas fa-download ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="min-h-screen py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Projek Terbaru</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-red-500 to-red-400 mx-auto"></div>
+                    <p class="text-gray-600 mt-6 max-w-2xl mx-auto">
+                        Beberapa projek yang telah saya kerjakan secara personal.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Project 1" 
+                             class="project-image">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Website E-Commerce</h3>
+                            <p class="text-gray-600 mb-4">
+                                Website e-commerce dengan fitur pembayaran online, keranjang belanja, dan sistem rekomendasi produk.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs px-2 py-1 bg-red-100 text-red-800 rounded">PHP</span>
+                                <span class="text-xs px-2 py-1 bg-red-100 text-red-800 rounded">JavaScript</span>
+                                <span class="text-xs px-2 py-1 bg-red-100 text-red-800 rounded">MySQL</span>
+                            </div>
+                            <a href="#" class="text-red-600 hover:text-red-800 font-medium inline-flex items-center">
+                                Lihat Detail
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Project 2" 
+                             class="project-image">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Website Perpustakaan Digital</h3>
+                            <p class="text-gray-600 mb-4">
+                                Website perpustakaan dengan fitur melihat buku dan meminjam buku, serta membaca buku secara online.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs px-2 py-1 bg-red-100 text-red-800 rounded">Javascript</span>
+                                <span class="text-xs px-2 py-1 bg-red-100 text-red-800 rounded">HTML</span>
+                                <span class="text-xs px-2 py-1 bg-red-100 text-red-800 rounded">CSS</span>
+                            </div>
+                            <a href="#" class="text-red-600 hover:text-red-800 font-medium inline-flex items-center">
+                                Lihat Detail
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Project 3" 
+                             class="project-image">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Website Pemesanan Kos</h3>
+                            <p class="text-gray-600 mb-4">
+                                Website pemesanan kos dengan fitur pembayaraan secara online, booking, serta melihat fasilitas dan kamar.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs px-2 py-1 bg-red-100 text-red-800 rounded">PHP</span>
+                                <span class="text-xs px-2 py-1 bg-red-100 text-red-800 rounded">JavaScript</span>
+                                <span class="text-xs px-2 py-1 bg-red-100 text-red-800 rounded">MySQL</span>
+                            </div>
+                            <a href="#" class="text-red-600 hover:text-red-800 font-medium inline-flex items-center">
+                                Lihat Detail
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="#" class="px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors duration-300 inline-flex items-center">
+                        Lihat Semua Projek
+                        <i class="fas fa-chevron-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="min-h-screen py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Hubungi Saya</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-red-500 to-red-400 mx-auto"></div>
+                    <p class="text-gray-600 mt-6 max-w-2xl mx-auto">
+                        Tertarik bekerja sama atau memiliki pertanyaan? Silakan hubungi saya melalui form berikut atau langsung melalui kontak yang tersedia.
+                    </p>
+                </div>
+                
+                <div class="flex flex-col md:flex-row gap-12">
+                    <div class="md:w-1/2">
+                        <form class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition">
+                            </div>
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subjek</label>
+                                <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Pesan</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition"></textarea>
+                            </div>
+                            <button type="submit" class="w-full px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors duration-300 shadow-lg">
+                                Kirim Pesan
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="md:w-1/2">
+                        <div class="bg-gray-50 p-8 rounded-lg shadow-inner h-full">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-6">Informasi Kontak</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 bg-red-100 p-3 rounded-full text-red-600">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="text-sm font-medium text-gray-500">Alamat</h4>
+                                        <p class="text-gray-800">Ds. Parelor RT08, Kec. Kunjang, Kab. Kediri, 64156</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 bg-red-100 p-3 rounded-full text-red-600">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="text-sm font-medium text-gray-500">Email</h4>
+                                        <p class="text-gray-800">ahmadubai02@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-12">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-6">Media Sosial</h3>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="w-10 h-10 flex items-center justify-center bg-red-600 text-white rounded-full hover:bg-red-700 transition-colors">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 flex items-center justify-center bg-pink-600 text-white rounded-full hover:bg-pink-700 transition-colors">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 text-white rounded-full hover:bg-gray-900 transition-colors">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <div class="text-2xl font-bold bg-gradient-to-r from-red-400 to-red-300 bg-clip-text text-transparent mb-4">
+                        Porto<span class="text-red-400">.</span>
+                    </div>
+                    <p class="text-gray-400 max-w-md">
+                        Seorang Front End Developer yang passionate tentang menciptakan pengalaman digital yang menarik dan fungsional.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:grid-cols-3">
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">Navigasi</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Beranda</a></li>
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">Tentang</a></li>
+                            <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors">Projek</a></li>
+                            <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Kontak</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">Kontak</h3>
+                        <ul class="space-y-2">
+                            <li class="text-gray-400">ahmadubai02@gmail.com</li>
+                            <li class="text-gray-400">Ds. Parelor RT08, Kediri</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">Media Sosial</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Ahmad Ubaidillah Tsani. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const text = "Front End Developer";
+            const element = document.getElementById('typing-text');
+            let i = 0;
+            let isDeleting = false;
+            let typingSpeed = 100;
+            let pauseBeforeDelete = 2000;
+            
+            function typeWriter() {
+                const currentText = element.innerHTML;
+                
+                if (!isDeleting && i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    typingSpeed = 100; 
+                } else if (isDeleting && currentText.length > 0) {
+                    element.innerHTML = currentText.substring(0, currentText.length - 1);
+                    typingSpeed = 80; 
+                } else {
+                    isDeleting = !isDeleting;
+                    
+                    if (!isDeleting) {
+                        i = 0;
+                        typingSpeed = pauseBeforeDelete;
+                    }
+                }
+                
+                setTimeout(typeWriter, typingSpeed);
+            }
+            
+            setTimeout(typeWriter, 1000);
+        });
+
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconHamburger = document.getElementById('icon-hamburger');
+        const iconClose = document.getElementById('icon-close');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            iconHamburger.classList.toggle('hidden');
+            iconClose.classList.toggle('hidden');
+        });
+        
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                iconHamburger.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
